@@ -1,0 +1,6 @@
+groups:
+ - name: up
+   rules:
+   - alert: InstanceDown
+     expr: up
+     for: 1m

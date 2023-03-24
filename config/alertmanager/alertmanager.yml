@@ -1,0 +1,11 @@
+global:
+  smtp_smarthost: 'localhost:25'
+  smtp_from: 'youraddress@ahsimon.org'
+route:
+  receiver: example-email
+  repeat_interval: 1h
+  group_by: [alertname]
+receivers:
+ - name: example-email
+   email_configs:
+    - to: 'youraddress@ahsimon.org'
